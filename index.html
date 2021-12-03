@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <script src='./game.js'></script>
+  </head>
+  <body>
+    <h1 id='wins'><span>0</span> Wins</h2>
+    <h1 id='losses'><span>0</span> Losses</h2>
+    <div id='game'></div>
+
+    <script>
+      const results = [];
+      const g = new Game(document.querySelector('#game'), (result)=> {
+              const elem = document.querySelector(`#${ result ? 'wins' : 'losses'} span`);
+              elem.innerText = elem.innerText*1 + 1;
+      });
+
+    </script>
+  </body>
+</html>
